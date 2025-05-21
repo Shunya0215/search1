@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ja"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;デリバリー九州様 採用市場分析インフォグラフィック&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Application Structure Plan:<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>The infographic follows a narrative structure, guiding the user from the general market challenges to specific company issues, competitor insights, and finally, the rationale behind the budget recovery proposal.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Sections:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>1.<span class="Apple-converted-space">  </span>熊本の飲食業界：厳しい採用戦線 (Overall Market Challenge)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>2.<span class="Apple-converted-space">  </span>市場のリアル：データで見る採用難 (Market Data Deep Dive)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>3.<span class="Apple-converted-space">  </span>デリバリー九州の現在地と課題 (Company-Specific Challenges)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>4.<span class="Apple-converted-space">  </span>競合の採用戦略 (Competitor Analysis)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>5.<span class="Apple-converted-space">  </span>予算回復：未来への投資 (Rationale for Budget Increase)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>6.<span class="Apple-converted-space">  </span>提案：勝利への道筋 (Key Proposal Elements)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>7.<span class="Apple-converted-space">  </span>結論 (Conclusion)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>This structure was chosen to build a compelling argument for the budget increase by first establishing the difficult market context, then showing how it impacts the company, how competitors are reacting, and finally, how the proposed budget addresses these issues.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Visualization &amp; Content Choices:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 1: Labor Shortage (7-8k/month) -&gt; Big Number (HTML/CSS). Goal: Inform. Justification: Immediate impact. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 2: Effective Job Openings Ratio (Kumamoto &amp; Food Service) -&gt; Line Chart (Chart.js). Goal: Change. Justification: Shows trend. Data: Report [9,10]. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 2: Minimum Wage Trend -&gt; Line Chart (Chart.js). Goal: Change. Justification: Rising costs. Data: Report [13]. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 3: Employee Composition (90% Part-time) -&gt; Donut Chart (Chart.js). Goal: Compare (proportion). Justification: Shows dependency. Data: Report [1]. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 3: Impact of Budget Cuts (Service quality, sales loss) -&gt; Styled HTML List/Cards. Goal: Organize. Justification: Clear qualitative points. Data: Report [6,7,8]. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 4: Competitor Salary Levels -&gt; Bar Chart (Chart.js). Goal: Compare. Justification: Benchmarking. Data: Report [18,22,3,23,24,25]. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 4: Competitor Media Usage -&gt; Text with Unicode Icons. Goal: Inform. Justification: Simple overview. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 5: Negative Cycle of Budget Cuts -&gt; Flow Chart (HTML/CSS with Tailwind). Goal: Organize (Process). Justification: Visualizes detrimental effects. (NO SVG, NO MERMAID JS)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 6: Proposed Media Mix -&gt; Donut Chart (Chart.js). Goal: Compare (allocation). Justification: Visualizes budget distribution. Conceptual data. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Section 6: Ad Content Optimization -&gt; Styled HTML Cards. Goal: Organize. Justification: Clear presentation of targeted messages. Data: Report VI. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- NEW FEATURE: Job Description Optimizer -&gt; Textarea, Radio Buttons, Button, Text Output (HTML/CSS, JavaScript, Gemini API). Goal: Inform/Assist. Justification: Directly supports ad content optimization by leveraging LLM for tailored text generation. (NO SVG)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif; background-color: #f8fafc; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (min-width: 768px) { .chart-container { height: 350px; } }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title { color: #073B4C; border-bottom: 3px solid #FFD166; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stat-card { background-color: white; border-left: 5px solid #118AB2; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.highlight-stat { color: #FF6B6B; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.flow-chart-step { border: 2px solid #06D6A0; background-color: #06D6A01A; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.flow-chart-arrow { color: #06D6A0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-sticky { position: -webkit-sticky; position: sticky; top: 0; z-index: 50; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(8px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.loading-spinner {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 4px solid #f3f3f3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: 4px solid #118AB2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: spin 1s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes spin {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: rotate(0deg); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: rotate(360deg); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="text-gray-800"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-[#073B4C] text-white py-8 px-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-4xl font-bold mb-2"&gt;デリバリー九州様 採用市場分析&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xl text-[#FFD166]"&gt;熊本県飲食業界のトレンドと採用戦略インフォグラフィック&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="nav-sticky shadow-md py-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="container mx-auto flex flex-wrap justify-center gap-x-4 gap-y-2 px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#section1" class="text-[#118AB2] hover:text-[#FF6B6B] font-semibold"&gt;採用戦線&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#section2" class="text-[#118AB2] hover:text-[#FF6B6B] font-semibold"&gt;市場データ&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#section3" class="text-[#118AB2] hover:text-[#FF6B6B] font-semibold"&gt;デリバリー九州の課題&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#section4" class="text-[#118AB2] hover:text-[#FF6B6B] font-semibold"&gt;競合分析&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#section5" class="text-[#118AB2] hover:text-[#FF6B6B] font-semibold"&gt;予算回復の意義&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#section6" class="text-[#118AB2] hover:text-[#FF6B6B] font-semibold"&gt;戦略提案&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="container mx-auto p-4 md:p-8 space-y-12"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section1" class="pt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;1. 熊本の飲食業界：厳しい採用戦線&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center bg-white p-8 rounded-xl shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xl text-gray-700 mb-2"&gt;熊本県では、飲食業界を含む全産業で深刻な人手不足が継続。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-6xl md:text-7xl font-extrabold highlight-stat"&gt;月間 7,000～8,000人&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-lg text-gray-600 mt-2"&gt;の人材が不足していると推計されています。(令和5-6年度平均) [11]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mt-4 text-md text-[#073B4C]"&gt;この状況は、特に労働集約型の飲食サービス業にとって大きな経営課題です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section2" class="pt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;2. 市場のリアル：データで見る採用難&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-8 text-gray-700 text-lg"&gt;客観的なデータは、熊本県における採用市場の厳しさを浮き彫りにしています。特に飲食サービス業は、他業種と比較しても人材獲得競争が激化している状況です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;有効求人倍率の推移&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-3"&gt;熊本県全体で求職者優位の「売り手市場」が継続。飲食サービス業の新規求人数は&lt;strong class="text-[#FF6B6B]"&gt;前年同月比2.9%増&lt;/strong&gt;と、需要がさらに高まっています。(2025年3月) [9, 10]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container h-64 md:h-72"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="jobOpeningsRatioChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;企業はより魅力的な条件を提示しなければ人材確保が困難な状況です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;最低賃金の上昇トレンド&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-3"&gt;熊本県の最低賃金は近年大幅に上昇。2024年は&lt;strong class="text-[#FF6B6B]"&gt;952円&lt;/strong&gt;、2025年には&lt;strong class="text-[#FF6B6B]"&gt;1,000円超&lt;/strong&gt;が確実視されています。[13] これは人件費の構造的な増加を意味します。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container h-64 md:h-72"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="minimumWageChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;採用広告予算だけでなく、総人件費への影響も考慮が必要です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section3" class="pt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;3. デリバリー九州の現在地と課題&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-8 text-gray-700 text-lg"&gt;デリバリー九州様も、この厳しい市場環境と無縁ではありません。現在の従業員構成と、採用予算削減がもたらす具体的な影響を見ていきましょう。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8 items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;従業員構成：パート・アルバイト依存度&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-3"&gt;デリバリー九州様の従業員構成は、正社員50名に対しパート・アルバイトが450名。実に&lt;strong class="text-[#FF6B6B]"&gt;約90%&lt;/strong&gt;がパート・アルバイト人材です。[1]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container h-64 md:h-72"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="employeeCompositionChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;この構成は、労働市場の変動が店舗運営に直接的な影響を与えやすいリスクを内包しています。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;採用予算削減が招く負の影響&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-4"&gt;採用予算の削減は、単に応募数が減るだけでなく、多岐にわたる経営リスクを引き起こします。[6, 7, 8]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="stat-card p-4 rounded-lg shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-[#073B4C]"&gt;📉 サービス品質・顧客満足度の低下&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-gray-600"&gt;提供遅延、清掃不備などが発生し、リピート率減・新規顧客獲得難へ。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="stat-card p-4 rounded-lg shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-[#073B4C]"&gt;💸 売上機会の損失&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-gray-600"&gt;営業時間短縮や休業日増加を余儀なくされ、直接的な売上減に。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="stat-card p-4 rounded-lg shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-[#073B4C]"&gt;⚙️ 業務効率・利益率の悪化&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-gray-600"&gt;食材ロス増加、機会損失による固定費負担増など。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;li class="stat-card p-4 rounded-lg shadow-md bg-[#FF6B6B20] border-l-[#FF6B6B]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-[#FF6B6B]"&gt;🚨 長期的ブランドイメージの毀損&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-gray-600"&gt;これらの問題が積み重なり、企業の信頼性や魅力が低下。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section4" class="pt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;4. 競合の採用戦略&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-8 text-gray-700 text-lg"&gt;熊本市内の飲食業界では、各社が積極的に採用活動を展開。デリバリー九州様も、これらの競合と人材獲得を競っています。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;競合の給与水準 (熊本市内居酒屋)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-3"&gt;競合は魅力的な給与を提示。正社員月給は平均&lt;strong class="text-[#FF6B6B]"&gt;25.9万円&lt;/strong&gt;、アルバイト時給は平均&lt;strong class="text-[#FF6B6B]"&gt;1,193円&lt;/strong&gt;。デリバリー九州様の一部店舗時給はこれを下回るケースも。[3, 18, 22, 23, 24, 25]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container h-72 md:h-80"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="competitorSalaryChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;給与競争力は応募獲得の重要な要素です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;主要求人媒体と差別化の必要性&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-4"&gt;多くの競合がIndeed、タウンワーク、求人ボックスといった主要媒体を利用しており、デリバリー九州様のFC店舗も同媒体で掲載中です。[18, 19, 20]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-3 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-lg font-semibold text-[#073B4C]"&gt;媒体での露出だけでは不十分！&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex justify-center space-x-4 text-4xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span title="Indeed"&gt;📰&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span title="Townwork"&gt;🗞️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span title="求人ボックス"&gt;📦&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-gray-600"&gt;同じ土俵で戦う中で、&lt;strong class="text-[#06D6A0]"&gt;「デリバリー九州ならではの魅力」&lt;/strong&gt;を明確に打ち出し、広告内容の質で差別化することが不可欠です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="text-xs text-left list-disc list-inside bg-slate-50 p-3 rounded-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;多様なブランド経験 (FC + 自社) [5]&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;手厚い教育制度・経営ノウハウ習得 [5]&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;明確なキャリアパス [5]&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section5" class="pt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;5. 予算回復：未来への投資&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-8 text-gray-700 text-lg"&gt;採用広告予算を5000万円に回復することは、単なるコスト増ではなく、企業の持続的成長と競争力強化のための戦略的投資です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;予算削減が引き起こす負のサイクル&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-4"&gt;採用広告費の削減は、以下のような悪循環を生み出し、結果的に採用効率を悪化させ、採用単価を高騰させる可能性があります。[32, 33]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flow-chart-step p-4 rounded-lg text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-semibold text-[#073B4C]"&gt;1. 求人広告費用削減&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-center text-4xl flow-chart-arrow"&gt;▼&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flow-chart-step p-4 rounded-lg text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-semibold text-[#073B4C]"&gt;2. 広告露出減・魅力低下 → &lt;strong class="text-[#FF6B6B]"&gt;応募数減少&lt;/strong&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-center text-4xl flow-chart-arrow"&gt;▼&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flow-chart-step p-4 rounded-lg text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-semibold text-[#073B4C]"&gt;3. 少ない応募者から採用 → &lt;strong class="text-[#FF6B6B]"&gt;採用単価上昇&lt;/strong&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-center text-4xl flow-chart-arrow"&gt;▼&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flow-chart-step p-4 rounded-lg text-center bg-[#FF6B6B20] border-[#FF6B6B]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-semibold text-[#FF6B6B]"&gt;4. 応募者の質低下・ミスマッチ増 → 早期離職リスク&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mt-6"&gt;5000万円への予算回帰は、この負のサイクルを断ち切り、採用活動の健全性を取り戻すために不可欠です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-2"&gt;戦略的意義：なぜ5000万円か？&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="list-disc list-inside text-gray-700 space-y-1 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;&lt;strong class="text-[#06D6A0]"&gt;経営リスク回避：&lt;/strong&gt;深刻な人手不足による機会損失（売上減、顧客離れ）を防ぐ。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;&lt;strong class="text-[#06D6A0]"&gt;競争力維持・強化：&lt;/strong&gt;競合が積極投資する中、市場での存在感を保つ。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;&lt;strong class="text-[#06D6A0]"&gt;人材の質と安定確保：&lt;/strong&gt;魅力的な条件提示と幅広い広報で優秀な人材を獲得。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;&lt;strong class="text-[#06D6A0]"&gt;成長への基盤：&lt;/strong&gt;物価・最低賃金上昇下で、現状維持すら困難。予算回復は「攻め」の第一歩。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-semibold text-[#118AB2] mb-2"&gt;費用対効果の視点&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-gray-700 mb-2"&gt;飲食業界の広告宣伝費目安は売上の3-5%。[28, 29, 30] 5000万円が売上規模に対し妥当か検証が必要です。採用単価の目標値を設定し（例：アルバイト2-5万円、正社員20-100万円 [31]）、効率的な運用を目指します。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-gray-700"&gt;&lt;strong class="text-[#FF6B6B]"&gt;重要：&lt;/strong&gt;迅速な応募者対応が採用成功率と費用対効果を大きく左右します。[32]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section6" class="pt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;6. 提案：勝利への道筋&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-8 text-gray-700 text-lg"&gt;5000万円の予算を最大限に活かすため、効果的なメディアミックスとターゲットに最適化された広告内容で、採用成功を目指します。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;効果的なメディアミックス戦略&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-3"&gt;各媒体の特性を活かし、正社員とアルバイトで訴求媒体を使い分け、予算を戦略的に配分します。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container h-64 md:h-72"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="mediaMixChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="text-xs text-gray-600 mt-4 space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong class="text-[#073B4C]"&gt;Indeed (35%):&lt;/strong&gt; 正社員向け。キャリアパス、教育制度を訴求。[5, 35]&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong class="text-[#06D6A0]"&gt;Baitoru/Townwork等 (40%):&lt;/strong&gt; アルバイト・パート向け。柔軟なシフト、待遇を強調。[3, 20, 23, 24]&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong class="text-[#FFD166]"&gt;自社サイト/SNS (15%):&lt;/strong&gt; ブランドイメージ構築、社員の声発信。[5, 32]&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong class="text-slate-500"&gt;その他・調整費 (10%):&lt;/strong&gt; 新規媒体、スカウト費用等。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;ターゲット別・広告内容の最適化&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600 mb-4"&gt;各ターゲット層のニーズに響くメッセージで、応募の質と量を高めます。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="p-4 rounded-lg bg-sky-50 border border-sky-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-sky-700"&gt;🎯 未経験者・若年層向け&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-sky-600"&gt;「未経験歓迎」「学歴不問」「手厚い教育・マニュアル完備」で安心感を醸成。[5]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="p-4 rounded-lg bg-emerald-50 border border-emerald-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-emerald-700"&gt;🚀 長期キャリア志向者向け&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-emerald-600"&gt;「経営ノウハウ習得」「多様なブランド経験」「明確なキャリアパス」で将来性をアピol&gt;[5]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="p-4 rounded-lg bg-amber-50 border border-amber-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-amber-700"&gt;🕒 アルバイト・パート向け&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-amber-600"&gt;「週1日/短時間OK」「Wワーク可」「髪色自由」「まかない有」等、具体的なメリットを提示。[3, 20, 23, 24]&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-semibold text-[#118AB2] mb-4"&gt;✨ 求人広告文最適化ツール ✨&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-gray-600 mb-4"&gt;基本的な求人内容とターゲットを選択するだけで、Geminiが魅力的な広告文を生成します。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-slate-50 p-6 rounded-lg shadow-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="jobDescriptionInput" class="block text-sm font-medium text-gray-700 mb-2"&gt;現在の求人内容 (例: 仕事内容、給与、勤務時間など)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;textarea id="jobDescriptionInput" rows="6" class="w-full p-3 border border-gray-300 rounded-md focus:ring-[#118AB2] focus:border-[#118AB2] text-sm" placeholder="例：ホール・キッチンスタッフ募集。時給1000円～。週3日、1日4時間からOK。未経験歓迎！"&gt;&lt;/textarea&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="mt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;ターゲット層を選択:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex flex-wrap gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;label class="inline-flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;input type="radio" name="targetAudience" value="未経験者・若年層" class="form-radio text-[#118AB2]" checked&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="ml-2 text-sm text-gray-700"&gt;未経験者・若年層&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;label class="inline-flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;input type="radio" name="targetAudience" value="長期キャリア志向者" class="form-radio text-[#118AB2]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="ml-2 text-sm text-gray-700"&gt;長期キャリア志向者&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;label class="inline-flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;input type="radio" name="targetAudience" value="アルバイト・パート" class="form-radio text-[#118AB2]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="ml-2 text-sm text-gray-700"&gt;アルバイト・パート&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button id="optimizeAdButton" class="mt-6 w-full bg-[#118AB2] hover:bg-[#073B4C] text-white font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 ease-in-out"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>✨ 広告文を最適化する ✨</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div id="loadingSpinner" class="loading-spinner mt-4"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div id="optimizedAdOutput" class="mt-6 p-4 bg-white border border-[#06D6A0] rounded-md text-gray-800 text-sm whitespace-pre-wrap shadow-md hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="section7" class="pt-8 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 pb-2 section-title"&gt;7. 結論：採用投資で未来を拓く&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-gradient-to-r from-[#118AB2] to-[#06D6A0] text-white p-8 rounded-xl shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xl leading-relaxed mb-4"&gt;熊本県の飲食業界は、前例のない人手不足に直面しています。この厳しい状況下でデリバリー九州様が持続的に成長するためには、採用広告予算を5000万円に回復させることが不可欠です。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-lg leading-relaxed mb-6"&gt;本提案は、単なるコスト増ではなく、&lt;strong class="text-[#FFD166]"&gt;機会損失の回避、サービス品質向上、顧客満足度と利益率の改善&lt;/strong&gt;に繋がる戦略的投資であることを示しています。効果的なメディア戦略と魅力的な広告内容で、デリバリー九州様の採用競争力を強化し、未来を担う人材を確保しましょう。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-2xl font-bold"&gt;この投資が、デリバリー九州様の更なる飛躍の礎となることを確信しています。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="text-center py-8 mt-12 border-t border-gray-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-gray-500"&gt;&amp;copy; &lt;span id="currentYear"&gt;&lt;/span&gt; 株式会社リクルート デリバリー九州様向けご提案資料&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('currentYear').textContent = new Date().getFullYear();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Smooth scroll for navigation links</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('nav a[href^="#"]').forEach(anchor =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>anchor.addEventListener('click', function (e) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const targetId = this.getAttribute('href');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const targetElement = document.querySelector(targetId);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (targetElement) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>targetElement.scrollIntoView({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>behavior: 'smooth'</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Helper function to wrap labels for Chart.js</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function wrapChartLabels(label, maxWidthChars = 16) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (typeof label !== 'string') return label; // Return as is if not a string</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (label.length &lt;= maxWidthChars) return label;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const words = label.split(''); // Split by characters for Japanese</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let lines = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentLine = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let i = 0; i &lt; words.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentLine.length + words[i].length &lt;= maxWidthChars) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentLine += words[i];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>lines.push(currentLine);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentLine = words[i];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lines.push(currentLine);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return lines;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const chartJsTooltipConfig = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>callbacks: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>title: function(tooltipItems) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const item = tooltipItems[0];</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (!item || !item.chart || !item.chart.data || !item.chart.data.labels) return '';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>let label = item.chart.data.labels[item.dataIndex];</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (Array.isArray(label)) {</p>
+<p class="p1"><span class="Apple-converted-space">                          </span>return label.join(''); // Join without space for Japanese</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                          </span>return label;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>label: function(context) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>let label = context.dataset.label || '';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (label) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>label += ': ';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (context.parsed.y !== null) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>label += context.parsed.y.toLocaleString('ja-JP');</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>if (context.dataset.unit) {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>label += context.dataset.unit;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return label;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>bodyFont: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>family: "'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>titleFont: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>family: "'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Chart.defaults.font.family = "'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif";</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Chart Data &amp; Initialization</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const energeticPlayfulPalette = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>red: '#FF6B6B',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>yellow: '#FFD166',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>teal: '#06D6A0',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blue: '#118AB2',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>darkBlue: '#073B4C',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lightBg: '#f8fafc'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 1. Effective Job Openings Ratio Chart</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const jobOpeningsCtx = document.getElementById('jobOpeningsRatioChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(jobOpeningsCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'line',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>labels: ['2024年9月', '2024年12月', '2025年3月'],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>label: '熊本県 有効求人倍率',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: [1.18, 1.19, 1.21],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>borderColor: energeticPlayfulPalette.blue,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundColor: energeticPlayfulPalette.blue + '33',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tension: 0.1,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>fill: true,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>unit: '倍'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>label: '飲食サービス業 (新規求人数 前年同月比)',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: [null, null, 2.9], // Simplified to show the latest stat from text</p>
+<p class="p1"><span class="Apple-converted-space">                </span>borderColor: energeticPlayfulPalette.red,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundColor: energeticPlayfulPalette.red + '33',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tension: 0.1,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>fill: false, // Better as a point for this data</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pointRadius: 5,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pointHoverRadius: 7,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'line', // Can also be bar for single point</p>
+<p class="p1"><span class="Apple-converted-space">                </span>yAxisID: 'y1',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>unit: '%増'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { ...chartJsTooltipConfig, responsive: true, maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scales: {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>y: { beginAtZero: false, suggestedMin: 1.0, suggestedMax: 1.5, title: { display: true, text: '有効求人倍率 (倍)', color: energeticPlayfulPalette.darkBlue } },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>y1: { type: 'linear', display: true, position: 'right', beginAtZero: true, suggestedMax: 5, title: { display: true, text: '新規求人数 前年同月比 (%)', color: energeticPlayfulPalette.darkBlue }, grid: { drawOnChartArea: false } }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>plugins: { ...chartJsTooltipConfig.plugins, legend: { position: 'bottom' } }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 2. Minimum Wage Chart</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const minimumWageCtx = document.getElementById('minimumWageChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(minimumWageCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'line',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>labels: ['2022年', '2023年', '2024年', '2025年 (予測)'],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>label: '熊本県 最低賃金',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: [853, 898, 952, 1010],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>borderColor: energeticPlayfulPalette.yellow,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundColor: energeticPlayfulPalette.yellow + '33',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tension: 0.1,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>fill: true,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>unit: '円'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { ...chartJsTooltipConfig, responsive: true, maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scales: { y: { beginAtZero: false, suggestedMin: 800, title: { display: true, text: '時給 (円)', color: energeticPlayfulPalette.darkBlue } } },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>plugins: { ...chartJsTooltipConfig.plugins, legend: { position: 'bottom' } }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 3. Employee Composition Chart</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const employeeCompositionCtx = document.getElementById('employeeCompositionChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(employeeCompositionCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'doughnut',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>labels: ['パート・アルバイト', '正社員'],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>label: '従業員構成',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: [450, 50], // 90%, 10%</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundColor: [energeticPlayfulPalette.teal, energeticPlayfulPalette.blue],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>borderColor: energeticPlayfulPalette.lightBg,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>hoverOffset: 4</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { ...chartJsTooltipConfig, responsive: true, maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">             </span>plugins: { ...chartJsTooltipConfig.plugins, legend: { position: 'bottom' } }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 4. Competitor Salary Chart</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const competitorSalaryCtx = document.getElementById('competitorSalaryChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(competitorSalaryCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'bar',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>labels: [wrapChartLabels('競合平均 (正社員月給)'), wrapChartLabels('競合平均 (バイト時給)'), wrapChartLabels('福よし (OP時給)'), wrapChartLabels('焼肉ライク (時給)')],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>label: '給与水準',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: [25.9, 1193, 1200, 1050], // 25.9万, 1193円, 1200円, 1000-1100円の平均1050円</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundColor: [energeticPlayfulPalette.blue, energeticPlayfulPalette.blue, energeticPlayfulPalette.teal, energeticPlayfulPalette.teal],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>datalabels: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>formatter: (value, context) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return context.dataIndex === 0 ? value + '万円' : value + '円';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { ...chartJsTooltipConfig, responsive: true, maintainAspectRatio: false, indexAxis: 'y',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scales: {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>x: {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>beginAtZero: true,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>title: { display: true, text: '金額', color: energeticPlayfulPalette.darkBlue },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>ticks: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>callback: function(value, index, ticks) {</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>// For the first bar (monthly salary in 10k JPY), show as '万円'</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (this.getLabelForValue(value).includes('月給')) return value + '万円';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return value.toLocaleString('ja-JP') + '円';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>y: { ticks: { autoSkip: false } }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>plugins: {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>...chartJsTooltipConfig.plugins,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>legend: { display: false },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>callbacks: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>label: function(context) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>let label = context.dataset.label || '';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (label) { label += ': '; }</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (context.parsed.x !== null) {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>if (context.label.some(l =&gt; l.includes('月給'))) { // Check if any part of multiline label includes '月給'</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>label += context.parsed.x + '万円';</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>label += context.parsed.x.toLocaleString('ja-JP') + '円';</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return label;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 5. Media Mix Chart</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mediaMixCtx = document.getElementById('mediaMixChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>new Chart(mediaMixCtx, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>type: 'doughnut',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>labels: [wrapChartLabels('Indeed (正社員)'), wrapChartLabels('Baitoru/Townwork等 (アルバイト)'), wrapChartLabels('自社サイト/SNS'), wrapChartLabels('その他・調整費')],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>label: '予算配分イメージ',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: [35, 40, 15, 10],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundColor: [energeticPlayfulPalette.blue, energeticPlayfulPalette.teal, energeticPlayfulPalette.yellow, energeticPlayfulPalette.red],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>borderColor: energeticPlayfulPalette.lightBg,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>hoverOffset: 4,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>unit: '%'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: { ...chartJsTooltipConfig, responsive: true, maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>plugins: {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>...chartJsTooltipConfig.plugins,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>legend: { position: 'bottom', labels: {boxWidth: 15} },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>callbacks: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>label: function(context) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>let label = context.label || '';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (Array.isArray(label)) label = label.join('');</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (label) {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>label += ': ';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>if (context.parsed !== null) {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>label += context.parsed + '%';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return label;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Gemini API Integration for Job Description Optimization</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const optimizeAdButton = document.getElementById('optimizeAdButton');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const jobDescriptionInput = document.getElementById('jobDescriptionInput');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const targetAudienceRadios = document.querySelectorAll('input[name="targetAudience"]');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const optimizedAdOutput = document.getElementById('optimizedAdOutput');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const loadingSpinner = document.getElementById('loadingSpinner');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>optimizeAdButton.addEventListener('click', async () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const jobDescription = jobDescriptionInput.value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let selectedTargetAudience = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>targetAudienceRadios.forEach(radio =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (radio.checked) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>selectedTargetAudience = radio.value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!jobDescription) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimizedAdOutput.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimizedAdOutput.textContent = '求人内容を入力してください。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimizedAdOutput.style.borderColor = energeticPlayfulPalette.red;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>optimizedAdOutput.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadingSpinner.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>optimizedAdOutput.style.borderColor = energeticPlayfulPalette.teal; // Reset border color</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let chatHistory = [];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const prompt = `あなたはデリバリー九州社の採用担当者です。以下の求人内容を、指定されたターゲット層に最も響くように最適化してください。</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>求人内容: ${jobDescription}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>ターゲット層: ${selectedTargetAudience}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>最適化された広告文を、箇条書きや強調を使い、魅力的に作成してください。`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>chatHistory.push({ role: "user", parts: [{ text: prompt }] });</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const payload = { contents: chatHistory };</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const apiKey = "";<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const response = await fetch(apiUrl, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>body: JSON.stringify(payload)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const result = await response.json();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (result.candidates &amp;&amp; result.candidates.length &gt; 0 &amp;&amp;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>result.candidates[0].content &amp;&amp; result.candidates[0].content.parts &amp;&amp;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>result.candidates[0].content.parts.length &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const text = result.candidates[0].content.parts[0].text;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optimizedAdOutput.textContent = text;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optimizedAdOutput.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optimizedAdOutput.textContent = '広告文の生成に失敗しました。もう一度お試しください。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optimizedAdOutput.style.borderColor = energeticPlayfulPalette.red;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optimizedAdOutput.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>console.error('Error calling Gemini API:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimizedAdOutput.textContent = 'エラーが発生しました。ネットワーク接続を確認し、もう一度お試しください。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimizedAdOutput.style.borderColor = energeticPlayfulPalette.red;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimizedAdOutput.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} finally {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>loadingSpinner.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
